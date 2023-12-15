@@ -28,8 +28,10 @@ print('add:', some_set)  # => {'new element', 2, 3, 4, 5, 'a'}
 first_set = {'one', 'two'}
 second_set = {'three', 'four'}
 print('union:', first_set.union(second_set))  # => {'three', 'one', 'four', 'two'}
+
 # v2
 print(first_set | some_set)  # => {'new element', 2, 3, 4, 5, 'two', 'one', 'a'}
+
 # v3
 # Не повертає нову множину, а працює з першою
 some_set |= second_set
@@ -41,6 +43,7 @@ some_set1 = {'a', 0, 2, 4, 6, 8}
 some_set2 = {1, 3, 5, 7, 8, 'a'}
 print(some_set1.intersection(some_set2))  # => {8, 'a'}
 print(some_set1.intersection(some_set2, first_set))  # => set()
+
 # v2
 print(some_set1 & some_set2)  # => {8, 'a'}
 print(some_set & some_set1 & some_set2)  # => {'a'}
@@ -57,8 +60,10 @@ print(first_set.isdisjoint(second_set))  # => True
 # issubset()
 # Перевірка того, що усі елементи множини є елементами іншої множини
 print(some_set1.issubset(some_set2))  # => False
+
 # v1
 print({1, 2}.issubset({1, 2, 3}))  # => True
+
 # v2
 print({1, 2} <= {1, 2, 3})  # => True
 
@@ -66,6 +71,7 @@ print({1, 2} <= {1, 2, 3})  # => True
 # Створення нової множини, яка є симетричною різницею даних множин
 # v1
 print({1, 2}.symmetric_difference({1, 2, 3}))  # => {3}
+
 # v2
 print({1, 2} ^ {1, 2, 3})  # => {3}
 # АЛЕ! Бінарні оператори потребують щоб другий операнд також був множиною:
