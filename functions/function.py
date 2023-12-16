@@ -53,8 +53,6 @@ def printing_positional_arguments(first, second):
 
 printing_positional_arguments('FIRST', 'SECOND')  # => first='FIRST' second='SECOND'
 printing_positional_arguments('SECOND', 'FIRST')  # => first='SECOND' second='FIRST'
-
-
 # printing_positional_arguments('SECOND', 'FIRST', 'THIRD')  # => TypeError: printing_positional_arguments()
 # takes 2 positional arguments but 3 were given
 
@@ -63,8 +61,6 @@ def printing_positional_arguments(first, second, third, *args):
 
 
 printing_positional_arguments('SECOND', 'FIRST', 'THIRD', 'fourth', 'fifth', '...', [], {}, 2)
-
-
 # => first='SECOND' second='FIRST' third='THIRD' ('fourth', 'fifth', '...', [], {}, 2)
 
 def print_sum(a, b, *nums):
@@ -88,8 +84,6 @@ def printing_positional_arguments(first, second, third):
 
 
 printing_positional_arguments(second='SECOND', first='FIRST', third='THIRD')
-
-
 # => first='FIRST' second='SECOND' third='THIRD'
 
 def hello_user(name, surname, middlename):
@@ -97,8 +91,6 @@ def hello_user(name, surname, middlename):
 
 
 hello_user(surname='Dil', middlename='Mon', name='Mark')  # => Hello Mark Dil Mon!
-
-
 # hello_user(surname='Dil', name='Mark')  # => TypeError: hello_user() missing 1 required positional
 # argument: 'middlename'
 
