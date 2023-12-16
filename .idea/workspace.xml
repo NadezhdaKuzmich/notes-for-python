@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96dc17ed-598e-4855-87bb-f859d74d5b2c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/conditional/if-elif-else.py" beforeDir="false" afterPath="$PROJECT_DIR$/conditional/if-elif-else.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/set_tuples/setMethods.py" beforeDir="false" afterPath="$PROJECT_DIR$/set_tuples/setMethods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +40,8 @@
     &quot;Python.dict.executor&quot;: &quot;Run&quot;,
     &quot;Python.dictMethods.executor&quot;: &quot;Run&quot;,
     &quot;Python.first_practice.executor&quot;: &quot;Run&quot;,
+    &quot;Python.function.executor&quot;: &quot;Run&quot;,
+    &quot;Python.function_return.executor&quot;: &quot;Run&quot;,
     &quot;Python.if-elif-else.executor&quot;: &quot;Run&quot;,
     &quot;Python.if-else.executor&quot;: &quot;Run&quot;,
     &quot;Python.list.executor&quot;: &quot;Run&quot;,
@@ -66,8 +67,8 @@
       <recent name="$PROJECT_DIR$/pythonTypes" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.setMethods">
-    <configuration name="dict" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.function">
+    <configuration name="function" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -76,11 +77,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dictionaries" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/functions" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dictionaries/dict.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/functions/function.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -89,7 +90,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="if-elif-else" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="function_return" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -98,11 +99,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/conditional" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/functions" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/conditional/if-elif-else.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/functions/function_return.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -201,11 +202,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.function" />
+        <item itemvalue="Python.function_return" />
         <item itemvalue="Python.setMethods" />
         <item itemvalue="Python.set_tuples" />
         <item itemvalue="Python.tupleMethods" />
-        <item itemvalue="Python.dict" />
-        <item itemvalue="Python.if-elif-else" />
       </list>
     </recent_temporary>
   </component>
