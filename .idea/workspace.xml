@@ -6,6 +6,27 @@
   <component name="ChangeListManager">
     <list default="true" id="96dc17ed-598e-4855-87bb-f859d74d5b2c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditional/if-elif-else.py" beforeDir="false" afterPath="$PROJECT_DIR$/python-basic/conditional/if-elif-else.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cycles/while-for.py" beforeDir="false" afterPath="$PROJECT_DIR$/python-basic/cycles/while-for.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dictionaries/dict.py" beforeDir="false" afterPath="$PROJECT_DIR$/python-basic/dictionaries/dict.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dictionaries/dictMethods.py" beforeDir="false" afterPath="$PROJECT_DIR$/python-basic/dictionaries/dict-methods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exceptions/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/python-basic/exceptions/exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/function.py" beforeDir="false" afterPath="$PROJECT_DIR$/python-basic/functions/function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/function_return.py" beforeDir="false" afterPath="$PROJECT_DIR$/python-basic/functions/function-return.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/lambda.py" beforeDir="false" afterPath="$PROJECT_DIR$/python-basic/functions/lambda.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/namespaces.py" beforeDir="false" afterPath="$PROJECT_DIR$/python-basic/functions/namespaces.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/recursion.py" beforeDir="false" afterPath="$PROJECT_DIR$/python-basic/functions/recursion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/scope.py" beforeDir="false" afterPath="$PROJECT_DIR$/python-basic/functions/scope.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/standart_funcs.py" beforeDir="false" afterPath="$PROJECT_DIR$/python-basic/functions/standard-funcs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pythonLists/list.py" beforeDir="false" afterPath="$PROJECT_DIR$/python-basic/python-lists/list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pythonLists/listMethods.py" beforeDir="false" afterPath="$PROJECT_DIR$/python-basic/python-lists/list-methods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pythonRules/rulesPython.py" beforeDir="false" afterPath="$PROJECT_DIR$/python-basic/python-rules/python-rules.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pythonTypes/boolean.py" beforeDir="false" afterPath="$PROJECT_DIR$/python-basic/python-types/boolean.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pythonTypes/number.py" beforeDir="false" afterPath="$PROJECT_DIR$/python-basic/python-types/number.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pythonTypes/string.py" beforeDir="false" afterPath="$PROJECT_DIR$/python-basic/python-types/string.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/set_tuples/setMethods.py" beforeDir="false" afterPath="$PROJECT_DIR$/python-basic/set-tuples/set-methods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/set_tuples/set_tuples.py" beforeDir="false" afterPath="$PROJECT_DIR$/python-basic/set-tuples/set-tuples.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/set_tuples/tupleMethods.py" beforeDir="false" afterPath="$PROJECT_DIR$/python-basic/set-tuples/tuple-methods.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +45,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/first_practice.py" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -69,11 +93,12 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/python_basic" />
       <recent name="$PROJECT_DIR$/Pythonrules" />
       <recent name="$PROJECT_DIR$/pythonTypes" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.exceptions">
+  <component name="RunManager" selected="Python.while-for">
     <configuration name="exceptions" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
@@ -140,28 +165,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="recursion" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="pythonProject" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/functions" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/functions/recursion.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="scope" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
@@ -206,13 +209,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="while-for" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cycles" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cycles/while-for.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.while-for" />
         <item itemvalue="Python.exceptions" />
         <item itemvalue="Python.scope" />
         <item itemvalue="Python.standart_funcs" />
         <item itemvalue="Python.lambda" />
-        <item itemvalue="Python.recursion" />
       </list>
     </recent_temporary>
   </component>
