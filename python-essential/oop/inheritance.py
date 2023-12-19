@@ -57,7 +57,8 @@ print(c.b)  # => 5
 
 
 class Doctor:
-    def can_cure(self):
+    @staticmethod
+    def can_cure():
         print('Я лікар, я вмію лікувати')
 
     def can_build(self):
@@ -110,6 +111,7 @@ car.turn_left()
 car.drive_backward()
 car.turn_right()
 car.drive_forward()
+
 
 class Airplane:
     def __init__(self, model):
