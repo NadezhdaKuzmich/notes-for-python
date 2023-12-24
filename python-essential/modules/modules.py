@@ -24,3 +24,9 @@
 # ● itertools - модуль із готовими функціями комбінаторики
 # ● re - модуль підтримки регулярних виразів
 # ● datetime - модуль дати та часу
+
+# Custom method from package:
+from my_module.hello import Test
+
+p = Test()
+p.hello()
