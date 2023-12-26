@@ -1,0 +1,21 @@
+{
+  "data": [
+    {
+      "name": "Arthur",
+      "age": 26
+    },
+    {
+      "name": "Kate",
+      "age": 95
+    },
+    {
+      "name": "Alice",
+      "age": 79
+    },
+    {
+      "name": "Mike",
+      "age": 85
+    }
+  ],
+  "current_date": "25-12-23"
+}
