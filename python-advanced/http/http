@@ -1,0 +1,42 @@
+Протокол HTTP
+- протокол прикладного рівня.
+- Клієнт/Сервер.
+- ідентифікація ресурсів.
+- структура протоколу.
+
+                  Запит ->
+HTTP Client                    HTTP Server
+              <- Відповідь
+
+Формат протоколу:
+- Заголовки.
+- Статус коди.
+- Запит/Відповідь.
+
+Запит:
+GET / HTTP HTTP/1.0 Host: example.com
+
+Відповідь:
+HTTP/1.1 200 OK
+Date: Wed, 30 Apr 2017 12:20:59 GMT Server: nginx
+Content-Language: ru
+Content-Type: text/plain; charset=utf-8 Content-Length: 128
+Connection: close
+Text data
+
+           Розшифрування статус-кодів:
+   Коди                                  Значення
+    1x                                 Інформаційні
+    2x                                Успіх виконання
+    3x                                Перенаправлення
+    4x                           Помилки на стороні клієнта
+    5x                           Помилки на стороні сервера
+
+Типи запитів:
+- GET
+- POST
+- PUT
+- DELETE
+- PATCH
+- OPTIONS - HEAD
+- etc.
