@@ -14,7 +14,6 @@ import requests
 
 urls = [
     'https://www.google.com/',
-    'https://devpython.ru/',
     'https://www.python.org/'
 ]
 
