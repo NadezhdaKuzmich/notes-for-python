@@ -51,18 +51,19 @@ print(chr(86))
 'hello world'.capitalize()  # => Hello world
 'some title'.title()  # => Some Title
 'hello world'.count('l')  # => 3
-'hello'.replace('e', 'l', 1)  # => "hlllo" замінює перший аргумент на другий n раз
+'hello'.replace('e', 'l', 1)  # => "hlllo" замінює перший
+# аргумент на другий n раз
 'SoMe StR'.swapcase()  # => sOmE sTr
 
 # Методи вирівнювання:
 'hello'.ljust(10, '#')  # => hello#####
 'hello'.rjust(10, '#')  # => #####hello
-'hi'.center(10, '#')    # => ####hi####
+'hi'.center(10, '#')  # => ####hi####
 
 # Методи видалення:
 '####hi####'.lstrip('#')  # => hi####
 '####hi####'.rstrip('#')  # => ####hi
-'####hi####'.strip('#')   # => hi
+'####hi####'.strip('#')  # => hi
 
 # Методи розділення:
 '###some string###'.split()  # => ['###some', 'string###']
@@ -83,7 +84,8 @@ print("I'm python developer".find('p', 5, 19))  # => 17
 
 # Заміна підстроки:
 print("I'm Python developer".replace('Python', 'Frontend'))
-print("I'm Python developer. I love Python.".replace('Python', 'Frontend', 2))
+print("I'm Python developer. I love Python."
+      .replace('Python', 'Frontend', 2))
 
 # Форматування рядків:
 # old:
@@ -91,11 +93,14 @@ print("I'm Python developer. I love Python.".replace('Python', 'Frontend', 2))
 name = 'Mark'
 surname = 'Dillan'
 age = 44
-print('Hello dear %s %s. Your age is %d' % (name, surname, age))  # => Hello dear Mark Dillan. Your age is 44
+print('Hello dear %s %s. Your age is %d' % (
+    name, surname, age))  # => Hello dear Mark Dillan. Your age is 44
 
 # popular:
 # print('Hello dear {0} {1}. Your age is {2}'.format('John', 'Stone', 38))
-print('Hello dear {0} {1}. Your age is {2}'.format(name, surname, age))  # => Hello dear Mark Dillan. Your age is 44
+print('Hello dear {0} {1}. Your age is {2}'
+      .format(name, surname, age))
+# => Hello dear Mark Dillan. Your age is 44
 
 # new:
 print(f'Hello dear {name} {surname}. Your age is {age}')
