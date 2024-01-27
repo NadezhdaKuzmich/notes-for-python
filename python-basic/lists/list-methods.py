@@ -14,7 +14,6 @@ print(shopping_list, id(shopping_list))  # => ['milk', 'bread', 'potato']
 shopping_list.clear()
 print(shopping_list, id(shopping_list))  # => []
 
-
 # extend() – розширює список переданої послідовності.
 shopping_list_weekly = ['milk', 'bread']
 shopping_list_monday = ['potatoes', 'onions']
@@ -23,9 +22,11 @@ print(shopping_list_weekly)  # => ['milk', 'bread', 'potatoes', 'onions']
 
 shopping_list_tuesday = ['icecream', 'chocolate']
 shopping_list_weekly += shopping_list_tuesday
-print(shopping_list_weekly)  # => ['milk', 'bread', 'potatoes', 'onions', 'icecream', 'chocolate']
+print(shopping_list_weekly)  # => ['milk', 'bread', 'potatoes', 'onions',
+# 'icecream', 'chocolate']
 
-# index() – повертає index вказаного елемента, якщо таких елементів кілька – поверне перший знайдений.
+# index() – повертає index вказаного елемента, якщо таких елементів кілька –
+# поверне перший знайдений.
 print(shopping_list_weekly.index('chocolate'))  # => 5
 
 # pop() – видаляє елемент зазначеного індексу та повертає його.
@@ -37,7 +38,8 @@ print(shopping_list_weekly)  # => ['milk', 'bread', 'potatoes', 'onions']
 shopping_list_weekly.reverse()  # => нічого не повертає (None)
 print(shopping_list_weekly)  # => ['onions', 'potatoes', 'bread', 'milk']
 
-# sort() – сортує перелік. Якщо вказати параметри reverse=True, тоді сортування буде у зворотному порядку.
+# sort() – сортує перелік. Якщо вказати параметри reverse=True, тоді сортування
+# буде у зворотному порядку.
 nums = [4, 1, 5, 2, 6, 3]
 nums.sort()  # => нічого не повертає (None)
 print(nums)  # => [1, 2, 3, 4, 5, 6]
@@ -51,7 +53,7 @@ print(shopping_list_weekly)  # => ['bread', 'milk', 'onions', 'potatoes']
 # Обхід списків
 counter = 1
 for item in shopping_list_weekly:
-    print(f'{counter}: {item}')
+    print(f'{counter}) {item}')
     counter += 1
 
 # index = 0
