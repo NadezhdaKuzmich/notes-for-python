@@ -99,12 +99,23 @@ print('~' * 40)
 #     list_nums[index] = list_nums[index] ** 2
 # print(list_nums)
 
-list_nums2 = [1, 4, 12, 8, 9, 10, 55, 10, 99]
-# maximum = list_nums2[0]
+list_nums2 = [1, -4, 12, -8, 9, 10, -55, 10, 99]
+maximum = list_nums2[0]
+minimum = list_nums2[0]
 # for i in range(1, len(list_nums2)):
 #     if list_nums2[i] > maximum:
 #         maximum = list_nums2[i]
 # print(maximum)
+
+for num in list_nums2:
+    if num > maximum:
+        maximum = num
+print(maximum)
+
+for num in list_nums2:
+    if num < minimum:
+        minimum = num
+print(minimum)
 
 print(max([1, 4, 12, 8, 9, 10, 55, 10, 99]))
 print(sorted(list_nums2)[-1])
