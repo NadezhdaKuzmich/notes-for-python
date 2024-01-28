@@ -90,7 +90,7 @@ print('~' * 40)
 # Задачки: 1. Порахувати за допомогою словника скільки разів елемент
 # повторюється у списку.
 classmates_name = ['Sergey', 'Igor', 'Tanya', 'Sergey', 'Mikhael', 'Sergey',
-                   'Lena']
+                   'Lena', 'Igor', 'Tanya']
 # v0
 # answer = {}
 # for name in classmates_name:
@@ -119,11 +119,14 @@ for name in classmates_name:
 print(answer)
 print('~' * 40)
 
+for key, value in answer.items():
+    print('key:', key, '-> count:', value)
+
 # 2. Пройтися за словником і вивести всі значення, які мають парний ключ.
 data_dict = {1: 'one', 8: 'any text', 2: '2', 6: '6', 9: 'end'}
 for key, value in data_dict.items():
     if key % 2 == 0:
-        print(value)
+        print(f'{key=} {value=}')
 print('~' * 40)
 
 # range_none: dict = dict().fromkeys(range(10), 'any value')
