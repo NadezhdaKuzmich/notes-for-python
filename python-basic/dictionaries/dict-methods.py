@@ -91,6 +91,15 @@ print('~' * 40)
 # повторюється у списку.
 classmates_name = ['Sergey', 'Igor', 'Tanya', 'Sergey', 'Mikhael', 'Sergey',
                    'Lena']
+# v0
+# answer = {}
+# for name in classmates_name:
+#     if name in answer:
+#         answer[name] += 1
+#     else:
+#         answer[name] = 1
+# print(answer)
+# print('~' * 40)
 
 # v1
 # answer = {}
