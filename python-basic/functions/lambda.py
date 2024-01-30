@@ -4,7 +4,9 @@
 # Синтаксис:
 # lambda x: x
 # Де перший x – це параметр, який передається у функцію, а другий – те,
-# що повертається. Еквівалент звичайної функції: def some_name(x): return x
+# що повертається.
+# Еквівалент звичайної функції:
+# def some_name(x): return x
 
 # lambda
 def make_something(function):
@@ -20,18 +22,20 @@ def foo(x):
     return x
 
 
-l = lambda x: x
+# In general, I would advise against this, as it goes against the PEP8
+# recommendations: l_func = lambda...
+l_func = (lambda x: x)
 print(foo(1))
-print(l(2))
+print(l_func(2))
 print(foo.__name__)  # => foo
-print(l.__name__)  # => <lambda>
+print(l_func.__name__)  # => <lambda>
 
 # def power(x, y):
 #     return x ** y
 #
 # print(power(2, 8))  # => 256
 
-p = lambda x, y: x ** y
+p = (lambda x, y: x ** y)
 print(p(2, 8))  # => 256
 
 nums = [4, 3, 2, 5, 6, 4, 3, 1]

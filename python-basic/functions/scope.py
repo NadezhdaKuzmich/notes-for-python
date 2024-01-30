@@ -52,12 +52,22 @@ print('~' * 40)
 
 # Напишіть функцію для прорахунку площі прямокутника, у параметрах
 # передаються висота та довжина.
-def rectangle_are(height: int, length: int) -> int:
+# Always use a def statement instead of an assignment statement that binds a
+# lambda expression directly to a name.
+# Yes:
+def rectangle(height: int, length: int) -> int:
     return height * length
 
 
-print(rectangle_are(2, 2))
+print(rectangle(2, 2))
 print('~' * 40)
 
-rectangle_are_l = lambda h, l: h * l
-print(rectangle_are_l(3, 3))
+# No:
+# rectangle_l = lambda h, l: h * l
+# print(rectangle_l(3, 3))
+
+# But:
+# In general I would advise against this, as it goes against the PEP8
+# recommendations.
+rectangle_l2 = (lambda height, length: height * length)
+print(rectangle_l2(3, 3))
