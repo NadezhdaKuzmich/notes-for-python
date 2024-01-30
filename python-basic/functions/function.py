@@ -57,7 +57,6 @@ printing_positional_arguments('FIRST', 'SECOND')
 # => first='FIRST' second='SECOND'
 printing_positional_arguments('SECOND', 'FIRST')
 # => first='SECOND' second='FIRST'
-
 # printing_positional_arguments('SECOND', 'FIRST', 'THIRD')  # => TypeError:
 # printing_positional_arguments() takes 2 positional arguments but 3 were given
 
@@ -99,7 +98,6 @@ def hello_user(name, surname, middlename):
 
 hello_user(surname='Dil', middlename='Mon', name='Mark')
 # => Hello Mark Dil Mon!
-
 # hello_user(surname='Dil', name='Mark')  # => TypeError: hello_user()
 # missing 1 required positional argument: 'middlename'
 
