@@ -1,5 +1,5 @@
-# Винятки – це механізм для обробки свідомо відомих помилок та інших можливих проблем під час виконання програми.
-# Як приклад – це розподіл на 0. Далі розберемося як обробляти цю помилку.
+# Винятки – це механізм для обробки свідомо відомих помилок та інших
+# можливих проблем під час виконання програми. Як приклад – це розподіл на 0.
 
 # Винятки
 # print('first step')
@@ -61,8 +61,9 @@ def bool_return():
 print(bool_return())  # => False
 print('~' * 40)
 
-# Для того, щоб обробка помилок була більш точковою, можна вказувати певний тип помилки, який ви очікуєте.
-# Спочатку відловлюються помилки типу BaseException, під які потрапляють будь-які помилки.
+# Для того, щоб обробка помилок була більш точковою, можна вказувати певний
+# тип помилки, який ви очікуєте. Спочатку відловлюються помилки типу
+# BaseException, під які потрапляють будь-які помилки.
 # try:
 #     ...
 # except BaseException:
@@ -84,6 +85,7 @@ except ZeroDivisionError:
 # raise ImportError
 print('~' * 40)
 
+
 # assert
 # if 1 != 2:
 #     raise AssertionError
@@ -97,8 +99,8 @@ print('~' * 40)
 
 # Практичні задачі
 # Task 1
-""" Реалізувати функцію, яка прийматиме на вхід номер місяця,
-повернути його назву та реалізувати в ньому кілька обробок винятків. """
+# Реалізувати функцію, яка прийматиме на вхід номер місяця,
+# повернути його назву та реалізувати в ньому кілька обробок винятків.
 def month_name(month_number):
     months = ['January', 'February', 'March',
               'April', 'May', 'Jun', 'July',
@@ -117,17 +119,25 @@ print(month_name(12))
 assert month_name(12) == 'December'
 print('~' * 40)
 
+
 # Task 2
-""" Потрібно перевірити, чи всі числа в послідовності
-є унікальними і реалізувати кілька обробок винятків """
+# Потрібно перевірити, чи всі числа в послідовності
+# є унікальними і реалізувати кілька обробок винятків
 def is_sequence_unique(sequence):
     try:
         return len(sequence[:]) == len(set(sequence))
     except (TypeError, KeyError) as error:
-        return f'You need to use only sequence type(str, list, range, tuple) \n Error: {error}'
+        return (f'You need to use only sequence type(str, list, range, tuple) '
+                f'\n Error: {error}')
 
 
 print(is_sequence_unique({'key': 'value'}))
+print('~' * 40)
+arr = [1, 2, 3, 4]
+print(is_sequence_unique(arr))
+print('~' * 40)
+arr = [1, 1, 2, 3]
+print(is_sequence_unique(arr))
 print('~' * 40)
 
 
