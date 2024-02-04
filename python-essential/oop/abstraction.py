@@ -11,7 +11,10 @@
 # з'являється в обох визначеннях. У разі інкапсуляції – це просте
 # приховування атрибутів та методів, а абстракція – це приховування цілих
 # класів чи груп класів шляхом побудови архітектури програмного продукту (
-# саме за рахунок ООП).
+# саме за рахунок ООП). Вона не має реалізації через ключові слова або
+# спеціальні символи. Абстракція є скомбінованим принципом успадкування,
+# інкапсуляції і поліморфізму.
+
 class Core:
     def __init__(self):
         self._types = {
@@ -63,7 +66,7 @@ class Parser:
         return self.__convert_type(a), self.__convert_type(b), op
 
 
-class Core:
+class Core2:
     def __init__(self):
         self._parser = Parser()
         self._functions = {
@@ -81,7 +84,7 @@ class Core:
 
 class Interface:
     def __init__(self):
-        self._core = Core()
+        self._core = Core2()
 
     def run_calculator(self):
         while True:
