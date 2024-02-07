@@ -2,5 +2,6 @@ class Test:
     def __init__(self):
         pass
 
-    def hello(self):
+    @staticmethod
+    def hello():
         print('Hello from package!')

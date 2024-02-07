@@ -8,7 +8,7 @@ counts = collections.Counter(a)
 print(counts)
 
 dict_of_lists = collections.defaultdict(list)
-for value in range(1, 11):
+for value in range(1, 13):
     if value % 2 == 0:
         dict_of_lists['even'].append(value)
     else:
@@ -25,7 +25,7 @@ d.popleft()
 print(d)
 d.append(4)
 print(d)
-d.appendleft(6)
+d.appendleft(0)
 print(d)
 d.pop()
 print(d)
