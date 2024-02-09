@@ -2,20 +2,20 @@
   "data": [
     {
       "name": "Arthur",
-      "age": 26
+      "age": 22
     },
     {
       "name": "Kate",
-      "age": 95
+      "age": 75
     },
     {
       "name": "Alice",
-      "age": 79
+      "age": 77
     },
     {
       "name": "Mike",
-      "age": 85
+      "age": 55
     }
   ],
-  "current_date": "25-12-23"
+  "current_date": "09-02-24"
 }
