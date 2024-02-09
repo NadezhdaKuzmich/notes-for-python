@@ -6,12 +6,12 @@ filename = 'my-files/my_text'
 
 text_file = open(filename, 'r')
 txt = text_file.read()
-text_file.close()
+text_file.close()  # !!!
 print(txt)
 
 # v2
 filename_uk = 'my-files/my_text_2'
-
+# without .close()
 with open(filename_uk, 'r', encoding='utf-8') as text_file:
     text1 = text_file.read(6)
     text2 = text_file.read(6)
