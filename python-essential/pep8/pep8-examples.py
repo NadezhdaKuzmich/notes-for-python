@@ -1,4 +1,6 @@
 import this
+
+
 # Beautiful is better than ugly.
 
 # bad example
@@ -38,3 +40,6 @@ def main(a, b):
     squares = get_squares(s)
     print_result(squares)
     return squares[:1]
+
+
+main(2, 4)
