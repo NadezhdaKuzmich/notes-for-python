@@ -20,7 +20,8 @@ last_names = root.findall('./person/last_name')
 # вибірка всіх тегів age із тегів person.
 ages = root.findall('./person/age')
 
-# збираємо теги у спільні групи та створюємо спільний словник для кожного person.
+# збираємо теги у спільні групи та створюємо спільний словник для кожного
+# person.
 for values in zip(first_names, last_names, ages):
     row = {value.tag: value.text for value in values}
     print(row)

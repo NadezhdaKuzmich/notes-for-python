@@ -9,5 +9,5 @@ with open('data/example1.csv', 'r') as f:
     print('Dialect', reader.dialect)
     for row in reader:
         print(row)
-        # для звернення до конкретного стовпця рядка використовуємо звернення по
-        # ключу `row['name'] --> row[0]`
+        # для звернення до конкретного стовпця рядка використовуємо
+        # звернення по ключу `row['name'] --> row[0]`

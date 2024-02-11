@@ -51,6 +51,8 @@ print(sql_text)
 cursor.execute('SELECT * FROM "users" WHERE id = ?', (10,))
 # іменовані параметри
 cursor.execute('SELECT * FROM "users" WHERE id = :id', {'id': 10})
-print(cursor.execute('SELECT * FROM "users" WHERE id = :id', {'id': 1}).fetchone())
-print(cursor.execute('SELECT id, first_name FROM "users" WHERE id = :id', {'id': 1}).fetchone())
+print(cursor.execute('SELECT * FROM "users" WHERE id = :id',
+                     {'id': 1}).fetchone())
+print(cursor.execute('SELECT id, first_name FROM "users" WHERE id = :id',
+                     {'id': 1}).fetchone())
 conn.close()
