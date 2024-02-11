@@ -12,6 +12,8 @@ print(my_str1)
 # print(my_str3)
 # print(my_str4)
 
+# Alt + Enter - change '' <=> ""
+
 # Конкатенація:
 # print('Hello' 'world')
 print('Hello ' 'world')
