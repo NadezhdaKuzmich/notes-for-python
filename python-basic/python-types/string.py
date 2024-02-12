@@ -1,16 +1,30 @@
 my_str1 = 'Python'
 my_str2 = "Hi"
+
+# багаторядкові рядки
 my_str3 = '''Hi
 from 
 next line'''
 my_str4 = """Hi from 
 next 
 line"""
+my_str5 = "First line\n" \
+          "Second line"
+my_str6 = """Lesson2. Variables and Data Types
+Some data types explained in this lesson:
+ - int
+ - bool
+ - float
+ - complex
+ - str
+"""
 
 print(my_str1)
 # print(my_str2)
 # print(my_str3)
 # print(my_str4)
+# print(my_str5)
+print(my_str6)
 
 # Alt + Enter - change '' <=> ""
 
@@ -37,8 +51,8 @@ print(my_str1.lower())
 # Рядкові літерали можуть містити екранування:
 # \t - вертикальна табуляція
 # \n - перенесення рядка
-my_str5 = "tab\t and new\n line"
-print(my_str5)
+my_str7 = "tab\t and new\n line"
+print(my_str7)
 
 # Сирі рядки:
 print(r'\path\to_the\file')

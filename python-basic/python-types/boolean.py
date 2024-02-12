@@ -13,6 +13,9 @@ print(4 < 5)
 print(4 >= 4)
 print(4 <= 5)
 
+# З операціями <, >, <=, >= можна використовувати подвійні порівняння:
+print(-2 <= 2 < 6)  # => True
+
 # Логічні оператори:
 # and
 yes = True
@@ -33,6 +36,7 @@ str1 = 'Hello my dear friend Markus'
 str2 = 'Hello my dear friend Markus'
 print(a is a)  # => True
 print(a is b)  # => False
+# print(2 is 2)  # => SyntaxWarning: "is" with 'int' literal.Did you mean "=="?
 print(a is not b)  # => True
 print(str1 is str2)  # => False (порівнює id())
 
