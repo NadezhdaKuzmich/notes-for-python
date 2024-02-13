@@ -3,11 +3,16 @@ num = 0
 num += 2  # num = num + 2
 print(num)
 
-# if:
+# if умова:
+#     оператори
 counter = 0
 if counter < 10:
     counter += 1
 print(counter)
+
+# Однорядкова форма (небажана для використання):
+# Тут оператори, якщо їх кілька, поділяються символом крапки з комою.
+# if умова: оператори
 
 # if & else:
 counter = 10
@@ -54,6 +59,8 @@ else:
 #     print("Your name is too long.")
 
 # Тернарні оператори:
+# Синтаксис умовного виразу у Python:
+# 'вираз1' if 'умова' else 'вираз2'
 a = 1
 b = 2
 result = a if a > b else b
