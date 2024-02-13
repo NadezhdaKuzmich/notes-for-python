@@ -10,9 +10,18 @@ if counter < 10:
     counter += 1
 print(counter)
 
+x = int(input('x = '))
+if x > 5:
+    print('x > 5')
+
 # Однорядкова форма (небажана для використання):
 # Тут оператори, якщо їх кілька, поділяються символом крапки з комою.
 # if умова: оператори
+
+# Блок операторів не може бути порожнім. Якщо така необхідність виникає, можна
+# скористатися оператором pass, який нічого не робить.
+# if value is not None:
+#     pass           # TODO: add logic
 
 # if & else:
 counter = 10
@@ -58,6 +67,21 @@ else:
 # if len(user_name) > 9:
 #     print("Your name is too long.")
 
+print('''Меню:
+1. Файл
+2. Вид
+3. Вихід''')
+choice = int(input('Ваш вибір: '))
+
+if choice == 1:
+    print('Ви вибрали пункт меню "Файл"')
+elif choice == 2:
+    print('Ви відкрили меню "Вид"')
+elif choice == 3:
+    print('Завершення.')
+else:
+    print('Некоректний вибір')
+
 # Тернарні оператори:
 # Синтаксис умовного виразу у Python:
 # 'вираз1' if 'умова' else 'вираз2'
@@ -79,6 +103,13 @@ print("You have", books, ("books" if books > 1 else "book"))
 #     cost = cost - cost * 0.03
 # print(cost)
 
-line = input("Any line \n")
+is_ready = True
+state_msg = 'Ready' if is_ready else 'Not ready yet'
+print(state_msg)
+
+is_ready = False
+print(is_ready and 'Ready' or 'Not ready yet')
+
+line = input("Enter any line \n")
 # print(line if bool(line) else None)
-print(line if line else None)
+print('You entered:', line if line else None)
