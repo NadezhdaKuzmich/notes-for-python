@@ -1,3 +1,8 @@
+# Функція - це іменована ділянка коду, до якої можна неодноразово звертатися
+# з інших місць програми. Функції можуть приймати параметри (аргументи) і
+# повертати значення. У Python будь-яка підпрограма є функцією. Якщо функція
+# явно не повертає жодного значення, автоматично повертається None.
+
 # Функція – це об'єкт, який приймає та повертає значення. Функцію можна
 # викликати з будь-якого місця в коді повторного використання. Ця концепція
 # допомагає уникнути повторюваних ділянок коду, а також розбивати програму
@@ -34,6 +39,20 @@
 # example3()
 # print(help(example3))  # => Docstring for information
 
+def hello_world():
+    print('Hello, World!')
+
+
+hello_world()
+
+# Головну функцію бажано викликати так
+# (таким чином функція буде викликана тільки якщо
+# цей файл був запущений як головний; це важливо
+# для додатків, що складаються з декількох модулів)
+if __name__ == '__main__':
+    hello_world()
+
+
 def print_sum():
     print(2 + 2)
 
@@ -49,6 +68,23 @@ print_sum(4, 4)  # => 8
 print_sum(6, 8)  # => 14
 
 
+def print_numbers(limit):
+    for i in range(limit):
+        print(i)
+
+
+print_numbers(2)
+
+
+def print_numbers(limit):
+    for i in range(limit):
+        print(i)
+
+
+n = int(input('Введіть n: '))
+print_numbers(n)
+
+
 def printing_positional_arguments(first, second):
     print(f'{first=} {second=}')
 
@@ -56,6 +92,8 @@ def printing_positional_arguments(first, second):
 printing_positional_arguments('FIRST', 'SECOND')
 # => first='FIRST' second='SECOND'
 printing_positional_arguments('SECOND', 'FIRST')
+
+
 # => first='SECOND' second='FIRST'
 # printing_positional_arguments('SECOND', 'FIRST', 'THIRD')  # => TypeError:
 # printing_positional_arguments() takes 2 positional arguments but 3 were given
@@ -64,10 +102,11 @@ def printing_positional_arguments(first, second, third, *args):
     print(f'{first=} {second=} {third=}', args)
 
 
-printing_positional_arguments('SECOND', 'FIRST', 'THIRD',
-                              'fourth', 'fifth', '...', [], {}, 2)
 # => first='SECOND' second='FIRST' third='THIRD' ('fourth', 'fifth', '...',
 # [], {}, 2)
+printing_positional_arguments('SECOND', 'FIRST', 'THIRD',
+                              'fourth', 'fifth', '...', [], {}, 2)
+
 
 def print_sum(a, b, *nums):
     print(a + b + sum(nums))
@@ -85,19 +124,36 @@ make_pizza('mushrooms', 'sausages', 'cheese')
 
 
 # Ключові аргументи
+# Функція, яка приймає три аргументи
+def info(obj, color, price):
+    print('Об\'єкт:', obj)
+    print('Колір:', color)
+    print('Ціна:', price)
+    print()
+
+
+# передача параметрів у прямому порядку
+info('ручка', 'синій', 1)
+# передача параметрів у довільному порядку
+info(price=5, obj='чашка', color='помаранчевий')
+# можна змішувати обидва способи, але спочатку повинні йти параметри,
+# які передаються в прямому порядку
+info('кава', price=10, color='чорний')
+
+
 def printing_positional_arguments(first, second, third):
     print(f'{first=} {second=} {third=}')
 
 
-printing_positional_arguments(second='SECOND', first='FIRST', third='THIRD')
 # => first='FIRST' second='SECOND' third='THIRD'
+printing_positional_arguments(second='SECOND', first='FIRST', third='THIRD')
+
 
 def hello_user(name, surname, middlename):
     print(f'Hello {name} {surname} {middlename}!')
 
 
 hello_user(surname='Dil', middlename='Mon', name='Mark')
-# => Hello Mark Dil Mon!
 # hello_user(surname='Dil', name='Mark')  # => TypeError: hello_user()
 # missing 1 required positional argument: 'middlename'
 

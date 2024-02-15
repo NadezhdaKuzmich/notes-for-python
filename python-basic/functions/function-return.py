@@ -1,5 +1,14 @@
 # Для того, щоб повернути результат функції, потрібно скористатися
 # спеціальним словом return.
+
+# def procedure():
+#     print('I return nothing... Or I do?')
+#
+#
+# value = procedure()  # => None
+# print('Результат функції:', value)
+
+
 def sum_numbers(a, b):
     return a + b
 
@@ -25,6 +34,40 @@ def sum_numbers(a, b, *args):
 result = sum_numbers(2, 3, 1, 3, 6, 2, 1, 8)
 print(result)  # => 26
 print(type(sum_numbers(2, 4)))  # => <class 'int'>
+
+
+def function(x):
+    if x < 0:
+        return x * 2
+    else:
+        return x * 3
+
+
+def main():
+    for i in range(-3, 4):
+        y = function(i)
+        print('function(', i, ') = ', y, sep='')
+
+
+main()
+
+
+def hello(name):
+    if not name:
+        return  # Якщо ім'я порожнє, виходимо з функції
+    print('Hello, ', name, '!', sep='')
+
+
+hello('Vadim')
+hello('')
+hello('Python')
+
+
+def hello(name='Nadiia'):
+    print('Hello, ', name, '!', sep='')
+
+
+hello()
 
 
 def external():
