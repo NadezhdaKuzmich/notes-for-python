@@ -10,6 +10,13 @@
 a_str = "10"
 a_int = int(a_str)
 
+# Функції bin, oct і hex повертають рядки, що становлять
+# дане число у відповідних системах числення
+number = int(input('Введіть число:'))
+print('Двійкова система:', bin(number))
+print('Вісімкова система: ', oct(number))
+print('Шістнадцяткова система:', hex(number))
+
 # str – перетворення на рядок
 b_int = 10
 b_str = str(b_int)
@@ -42,3 +49,7 @@ print(max(my_list))  # 10 max of values in list
 print(min(my_list))  # -35 min of values in list
 
 print(sum(my_list) / len(my_list))  # -5.0 average of values in list
+
+# reversed дозволяє обходити послідовність у зворотному порядку
+for i in reversed(range(5)):
+    print(i)
