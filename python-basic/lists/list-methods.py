@@ -10,6 +10,10 @@ print(shopping_list, id(shopping_list))  # => ['milk', 'bread']
 shopping_list.append('potatoes')
 print(shopping_list, id(shopping_list))  # => ['milk', 'bread', 'potato']
 
+# del - для видалення елемента списку за індексом.
+del shopping_list[1]
+print('new array', shopping_list)
+
 # clear() – видалити всі елементи списку.
 shopping_list.clear()
 print(shopping_list, id(shopping_list))  # => []
