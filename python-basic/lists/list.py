@@ -61,3 +61,5 @@ print(my_list2[-1:-6:-2])  # => ['python', 'hello', 2]
 
 my_list3 = list(range(5))
 print(my_list3)  # => [0, 1, 2, 3, 4]
+
+print(my_list3[::-1])  # => [4, 3, 2, 1, 0]

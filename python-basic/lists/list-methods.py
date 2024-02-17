@@ -10,6 +10,9 @@ print(shopping_list, id(shopping_list))  # => ['milk', 'bread']
 shopping_list.append('potatoes')
 print(shopping_list, id(shopping_list))  # => ['milk', 'bread', 'potato']
 
+my_list = [1, 5, 1, 3, 7, 8, 124]
+print(len(my_list))
+
 # del - для видалення елемента списку за індексом.
 del shopping_list[1]
 print('new array', shopping_list)
@@ -125,3 +128,14 @@ print(max([1, 4, 12, 8, 9, 10, 55, 10, 99]))
 print(sorted(list_nums2)[-1])
 # list_nums2.sort()
 # print(list_nums2[-1])
+
+# Створення списку
+my_list = [5, 7, 9, 1, 1, 1, 2]
+# Введення значення
+value = int(input('Введіть число: '))
+
+# Перевірка, чи знаходиться дане число в списку
+if value in my_list:
+    print('Число входить до списку')
+else:
+    print('Число не входить до списку')
