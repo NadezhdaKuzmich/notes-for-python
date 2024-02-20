@@ -32,6 +32,7 @@ print('next(iter): ')
 print(next(it), next(it), next(it), next(it), next(it))
 print()
 
+
 # custom func
 def my_for(iterable, callback):
     itr = iter(iterable)
