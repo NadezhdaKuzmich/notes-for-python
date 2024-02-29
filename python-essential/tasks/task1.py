@@ -7,7 +7,7 @@ import copy
 # Створіть клас, який описує відгук до книги. Додайте до класу книги
 # поле – перелік відгуків. Зробіть так, що при виведенні книги на екран
 # за допомогою функції print також виводитимуться відгуки до неї.
-class Book(object):
+class Book:
     def __init__(self, author, title, publication_year, genre, comments=None):
         if comments is None:
             comments = []
@@ -44,7 +44,7 @@ class Book(object):
         return self.__as_string("Book({!r}, {!r}, {!r}, {!r}, {!r})")
 
 
-class Comment(object):
+class Comment:
     def __init__(self, mark, text):
         self.mark = mark
         self.text = text
