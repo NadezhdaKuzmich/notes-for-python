@@ -32,7 +32,7 @@ class Rectangle(GraphicalObject):
                 print('*' * self.width)
 
 
-class Clickable(object):
+class Clickable:
     def on_click(self):
         print(self.__class__.__name__, 'clicked')
 
@@ -53,6 +53,12 @@ def main():
     button = Button()
     button.draw()
     button.click()
+    print()
+
+    print(GraphicalObject.mro())
+    print(Rectangle.mro())
+    print(Clickable.mro())
+    print(Button.mro())
 
 
 if __name__ == '__main__':
