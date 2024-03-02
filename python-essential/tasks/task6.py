@@ -21,7 +21,7 @@ class Reversed:
 
 
 def main():
-    my_list = [1, 2, 5, 7, 9]
+    my_list = [1, 2, 3, 4, 5]
     for i in Reversed(my_list):
         print(i)
 
