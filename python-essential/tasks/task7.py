@@ -1,15 +1,10 @@
-def my_reversed(sequence):
-    index = len(sequence) - 1
-
-    while index >= 0:
-        yield sequence[index]
-        index -= 1
+def average(*numbers):
+    return sum(numbers) / len(numbers)
 
 
 def main():
-    my_list = [1, 2, 3, 4, 5]
-    for i in my_reversed(my_list):
-        print(i)
+    print(average(2, 4, 6))
+    print(average(*range(20)))
 
 
 if __name__ == '__main__':
