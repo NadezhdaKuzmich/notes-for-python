@@ -38,6 +38,10 @@ print('Hello!', 'My name', full_name, 'I\'m', __my_age)
 # моя_змінна = 'Доброго вечора'
 # print(моя_змінна)
 
+# Multiple assignment
+name, age = 'Надія', 27
+print(name, age)
+
 # print – це функція, яка виводить інформацію на екран
 # параметри (аргументи) функцій беруться у круглі дужки
 print('Hello, World!')
