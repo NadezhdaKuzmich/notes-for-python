@@ -53,3 +53,16 @@ def find_digits_chars_symbols(sample_str):
 string = "P@yt2h&#o5n"
 print("Total counts of chars, digits, and symbols:")
 find_digits_chars_symbols(string)
+
+# task 5
+input_str = "Python27@#4968"
+total = 0
+cnt = 0
+
+for char in input_str:
+    if char.isdigit():
+        total += int(char)
+        cnt += 1
+
+avg = total / cnt
+print(f"Sum is: {total}. Average is {avg}")
