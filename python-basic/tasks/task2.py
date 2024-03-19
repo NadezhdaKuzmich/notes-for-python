@@ -38,10 +38,10 @@ def find_digits_chars_symbols(sample_str):
     digit_count = 0
     symbol_count = 0
 
-    for char in sample_str:
-        if char.isalpha():
+    for el in sample_str:
+        if el.isalpha():
             char_count += 1
-        elif char.isdigit():
+        elif el.isdigit():
             digit_count += 1
         else:
             symbol_count += 1
