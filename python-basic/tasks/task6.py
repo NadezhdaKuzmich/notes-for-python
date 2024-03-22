@@ -1,8 +1,8 @@
 name = input('Enter file: ')
-handle = open(f'data/{name}', 'r')
+text_file = open(f'data/{name}', 'r')
 
 counts = dict()
-for line in handle:
+for line in text_file:
     words = line.split()
     for word in words:
         counts[word] = counts.get(word, 0) + 1
@@ -13,4 +13,6 @@ for word, count in counts.items():
     if big_count is None or count > big_count:
         big_word = word
         big_count = count
+
 print(big_word, big_count)
+text_file.close()

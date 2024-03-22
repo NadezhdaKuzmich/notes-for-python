@@ -40,3 +40,6 @@ print(sen1[0:6])
 # Exercise #10
 sen1 = "Pizza is love. Pizza is life."
 print(sen1[1:])
+
+# «cat» показує, що у файлі
+# cat task1.py
