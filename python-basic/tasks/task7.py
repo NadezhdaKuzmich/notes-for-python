@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
-from time import gmtime, strftime
+from time import time, gmtime, strftime
+from dateutil.relativedelta import relativedelta
 
 # task 0
 # v1
@@ -72,3 +73,36 @@ days_to_add = 7
 res_date = given_date + timedelta(days=days_to_add, hours=12)
 print("\nNew Date")
 print(res_date)
+
+# task 6
+milliseconds = int(round(time() * 1000))
+print('\ntask 6:')
+print(milliseconds)
+
+# task 7
+given_date = datetime.now()
+string_date = given_date.strftime("%Y-%m-%d %H:%M:%S")
+print('\ntask 7:')
+print(string_date)
+
+# task 8
+given_date = datetime.now().date()
+print('\ntask 8:')
+print(given_date)
+months_to_add = 4
+new_date = given_date + relativedelta(months=+ months_to_add)
+print(new_date)
+
+# task 9
+date_1 = datetime.now().date()
+date_2 = datetime(2024, 7, 5).date()
+
+delta = None
+print('\ntask 9:')
+if date_1 > date_2:
+    print("date_1 is greater")
+    delta = date_1 - date_2
+else:
+    print("date_2 is greater")
+    delta = date_2 - date_1
+print("Difference is", delta.days, "days")
