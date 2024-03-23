@@ -71,6 +71,7 @@ print(vehicleJson)
 def vehicle_decoder_func(obj):
     return Vehicle(obj['name'], obj['engine'], obj['price'])
 
+
 # object_hook - являє собою користувацьку функцію і якщо вказана, то буде
 # викликатися з результатом декодування кожного об'єкта JSON dict, а її
 # значення, що повертається, буде використовуватися замість відповідного
@@ -84,3 +85,18 @@ print("Type of decoded object from JSON Data")
 print(type(vehicleObj))
 print("Vehicle Details:")
 print(vehicleObj.name, vehicleObj.engine, vehicleObj.price)
+
+
+# task 8
+def validate_json(json_data):
+    try:
+        json.loads(json_data)
+    except ValueError as err:
+        return False
+    return True
+
+
+invalid_json_data = """{ "company":{ "employee":{ "name":"emma", "payable":{ 
+"salary":7000 "bonus":800} } } }"""
+is_valid = validate_json(invalid_json_data)
+print("Given JSON string is Valid:", is_valid)
