@@ -13,6 +13,8 @@ print(data['key2'])
 
 # task 3
 sampleJson = {"key1": "value2", "key2": "value2", "key3": "value3"}
+# indent - використовується для відступу кожного рівня.
+# separators має бути кортежем (item_separator, key_separator)
 prettyPrintedJson = json.dumps(sampleJson, indent=2, separators=(",", " = "))
 print(prettyPrintedJson)
 
@@ -58,5 +60,27 @@ class VehicleEncoder(JSONEncoder):
 
 vehicle = Vehicle("Toyota Rav4", "2.5L", 32000)
 print("Encode Vehicle Object into JSON")
+# Щоб використовувати власний підклас JSONEncoder (наприклад, той, який
+# перевизначає метод default() для серіалізації додаткових типів), вкажіть
+# його за допомогою cls kwarg; інакше використовується JSONEncoder.
 vehicleJson = json.dumps(vehicle, indent=2, cls=VehicleEncoder)
 print(vehicleJson)
+
+
+# task 7
+def vehicle_decoder_func(obj):
+    return Vehicle(obj['name'], obj['engine'], obj['price'])
+
+# object_hook - являє собою користувацьку функцію і якщо вказана, то буде
+# викликатися з результатом декодування кожного об'єкта JSON dict, а її
+# значення, що повертається, буде використовуватися замість відповідного
+# словника dict. Цю поведінку можна використовувати для забезпечення
+# настроюваної десеріалізації.
+vehicleObj = json.loads(
+    '{ "name": "Toyota Rav4", "engine": "2.5L", "price": 32000 }',
+    object_hook=vehicle_decoder_func)
+
+print("Type of decoded object from JSON Data")
+print(type(vehicleObj))
+print("Vehicle Details:")
+print(vehicleObj.name, vehicleObj.engine, vehicleObj.price)
