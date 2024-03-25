@@ -1,6 +1,7 @@
 import random
 import secrets
 import string
+import time
 
 # task 1
 print("Generating 3 random integer number between 100 and 999 divisible by 5")
@@ -136,3 +137,21 @@ print("Randomly selecting same number of a dice")
 for i in range(5):
     random.seed(1)
     print(random.choice(dice))
+
+
+# task 10
+def get_random_date(start_date, end_date):
+    print("Printing random date between", start_date, " and ", end_date)
+    random_generator = random.random()
+    date_format = '%m/%d/%Y'
+
+    start_time = time.mktime(time.strptime(start_date, date_format))
+    end_time = time.mktime(time.strptime(end_date, date_format))
+
+    random_time = start_time + random_generator * (end_time - start_time)
+    random_date = time.strftime(date_format, time.localtime(random_time))
+    return random_date
+
+
+print("Random Date = ",
+      get_random_date("01/01/2016", "12/12/2018"))
