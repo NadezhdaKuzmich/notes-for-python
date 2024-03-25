@@ -1,5 +1,6 @@
 import random
 import secrets
+import string
 
 # task 1
 print("Generating 3 random integer number between 100 and 999 divisible by 5")
@@ -57,3 +58,44 @@ print("random char is ", char)
 # k=1 - кількість обраних випадкових елементів.
 chars = random.choices(name, k=2)
 print("random 3 chars is ", chars)
+
+
+# task 5
+def random_string(string_length):
+    # Константне перерахування літер із набору ASCII у верхньому та нижньому
+    # регістрах. Включає літери, визначені в константах ascii_uppercase й
+    # ascii_lowercase.
+    letters = string.ascii_letters
+    return ''.join(random.choice(letters) for _ in range(string_length))
+
+
+print("Random String is ", random_string(6))
+
+
+# task 6
+def random_password():
+    # string.digits: '0123456789'
+    # string.punctuation: рядок ASCII символів, які вважаються розділовими
+    # знаками в локалі мови C: !"#$%&'()*+,-./::;<=>?@[\]^_{|}~
+    random_source = string.ascii_letters + string.digits + string.punctuation
+
+    # Функція sample() модуля random повертає список довжини k випадкових
+    # елементів, обраних із послідовності або множини population. Початкова
+    # послідовність population залишається незмінною.
+    password = random.sample(random_source, 6)
+    password += random.sample(string.ascii_uppercase, 2)
+    password += random.choice(string.digits)
+    password += random.choice(string.punctuation)
+    password_list = list(password)
+
+    # Клас random.SystemRandom() - альтернативні клас для випадкових чисел,
+    # який бере випадкові числа не з вбудованого алгоритму, а з системного
+    # os.urandom.
+    # Функція shuffle() модуля random перемішує елементи змінюваної
+    # послідовності (список) на місці у випадковому порядку.
+    random.SystemRandom().shuffle(password_list)
+    password = ''.join(password_list)
+    return password
+
+
+print("Password is ", random_password())
