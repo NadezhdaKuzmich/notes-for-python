@@ -99,3 +99,40 @@ def random_password():
 
 
 print("Password is ", random_password())
+
+# task 7
+# random.random() - випадкове число від 0 до 1.
+num1 = random.random()
+print("First Random float is ", num1)
+
+# random.uniform(A, B) - випадкове число з плаваючою крапкою, A ≤ N ≤ B
+# (або B ≤ N ≤ A).
+num2 = random.uniform(9.5, 99.5)
+print("Second Random float is ", num1)
+num3 = num1 * num2
+print("Multiplication is ", num3)
+
+# task 8
+# Функція secrets.token_hex() повертає випадковий текстовий рядок у
+# шістнадцятковому форматі. Рядок містить nbytes випадкових байтів, кожен
+# байт перетворюється на дві шістнадцяткові цифри.
+print("Random secure Hexadecimal token is ", secrets.token_hex(64))
+
+# Функція secrets.token_urlsafe() повертає випадковий URL-безпечний текстовий
+# рядок, що містить nbytes випадкових байтів. Текст у кодуванні Base64, тому в
+# середньому кожен байт дає приблизно 1,3 символу.
+print("Random secure URL is ", secrets.token_urlsafe(64))
+
+# task 9
+dice = [1, 2, 3, 4, 5, 6]
+print("Randomly selecting same number of a dice")
+# Істинно випадкову послідовність повторити неможливо. Але для повторення
+# псевдовипадкових чисел в обох основних бібліотеках - random і numpy.random є
+# функція seed (), яка відповідає за ініціалізацію ("посів") послідовності.
+# У необов'язковому параметрі методу передається число для ініціалізації або
+# свого роду маркування згенерованого числа. Тому при повторному застосуванні
+# методу random згенероване число не змінюється. Якщо ж параметр залишити
+# порожнім, то генеруватиметься щоразу нове число.
+for i in range(5):
+    random.seed(1)
+    print(random.choice(dice))
