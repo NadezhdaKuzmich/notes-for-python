@@ -143,15 +143,30 @@ for i in range(5):
 def get_random_date(start_date, end_date):
     print("Printing random date between", start_date, " and ", end_date)
     random_generator = random.random()
-    date_format = '%m/%d/%Y'
-
+    date_format = '%d/%m/%Y'
+    # Метод mktime модуля time перетворює рядок із датою і
+    # часом у секунди. У параметрі методу вказуємо структуру
+    # часу struct_time або кортеж із 9 елементів з обов'язковим
+    # прапором dst, який відображає локальний час.
+    # Функція mktime переводить задану дату у формат timestamp.
+    # Формат timestamp - це кількість секунд, що минула з 1-го
+    # січня 1970 року по заданий момент часу.
     start_time = time.mktime(time.strptime(start_date, date_format))
+    # Метод strptime() аналізує рядок, що представляє час
+    # відповідно до формату. Значення, що повертається, -
+    # struct_time, що повертає gmtime() або localtime().
     end_time = time.mktime(time.strptime(end_date, date_format))
-
     random_time = start_time + random_generator * (end_time - start_time)
+    # Метод strftime() перетворює кортеж або struct_time,
+    # що представляє час, який повертає gmtime() або localtime()
+    # в рядок, як визначено аргументом format.
+    # time.localtime() повертає структуру, яка містить поточну
+    # дату і час з урахуванням локального часового поясу.
     random_date = time.strftime(date_format, time.localtime(random_time))
     return random_date
 
 
 print("Random Date = ",
-      get_random_date("01/01/2016", "12/12/2018"))
+      get_random_date("01/01/2020", "31/12/2023"))
+print("Random Date = ",
+      get_random_date("24/02/2022", "24/02/2024"))
