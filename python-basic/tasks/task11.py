@@ -44,3 +44,26 @@ def show_employee(name, salary=9000):
 
 show_employee('John', 12000)
 show_employee("Kate")
+
+
+# task 5
+def outer_func(a, b):
+    def addition(x, y):
+        return x + y
+
+    add_value = addition(a, b)
+    return add_value + 5
+
+
+result = outer_func(5, 20)
+print(result)
+
+# task 6
+def addition(num):
+    if num:
+        return num + addition(num - 1)
+    else:
+        return 0
+
+res = addition(10)
+print(res)
