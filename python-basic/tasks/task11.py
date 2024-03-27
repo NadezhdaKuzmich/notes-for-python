@@ -43,7 +43,7 @@ def show_employee(name, salary=9000):
 
 
 show_employee('John', 12000)
-show_employee("Kate")
+show_employee('Kate')
 
 
 # task 5
@@ -58,6 +58,7 @@ def outer_func(a, b):
 result = outer_func(5, 20)
 print(result)
 
+
 # task 6
 def addition(num):
     if num:
@@ -65,5 +66,23 @@ def addition(num):
     else:
         return 0
 
+
 res = addition(10)
 print(res)
+
+
+# task 7
+def display_student(name, age):
+    print(name, age)
+
+
+display_student('John', 21)
+showStudent = display_student
+showStudent('John', 21)
+
+# task 8
+print(list(range(4, 30, 2)))
+
+# task 9
+x = [4, 6, 8, 24, 12, 2]
+print(max(x))
