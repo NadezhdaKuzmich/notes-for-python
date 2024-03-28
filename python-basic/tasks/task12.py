@@ -40,3 +40,20 @@ print("List after Adding element at index 2 ", sample_list)
 # append() використовується тільки для додавання елементів у кінець списку.
 sample_list.append(element)
 print("List after Adding element at last ", sample_list)
+
+# task 3
+sample_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print("Original list ", sample_list)
+
+part_size = int(len(sample_list) / 3)
+start, end = 0, part_size
+
+for i in range(3):
+    list_part = sample_list[start:end]
+    print("Chunk ", i, list_part)
+    # У Python є вбудована функція reversed() , яка повертає
+    # розгорнутий ітератор. Однак, ця функція повертає ітератор,
+    # а не рядок.
+    print("After reversing it ", list(reversed(list_part)))
+    start = end
+    end += part_size
