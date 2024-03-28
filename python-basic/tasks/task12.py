@@ -51,9 +51,65 @@ start, end = 0, part_size
 for i in range(3):
     list_part = sample_list[start:end]
     print("Chunk ", i, list_part)
-    # У Python є вбудована функція reversed() , яка повертає
-    # розгорнутий ітератор. Однак, ця функція повертає ітератор,
-    # а не рядок.
+    # reversed() повертає розгорнутий ітератор, а не рядок.
     print("After reversing it ", list(reversed(list_part)))
     start = end
     end += part_size
+
+# task 4
+sample_list = [1, 2, 8, 1, 2, 4, 2, 8, 7]
+print("Original list ", sample_list)
+
+count_dict = dict()
+for item in sample_list:
+    if item in count_dict:
+        count_dict[item] += 1
+    else:
+        count_dict[item] = 1
+
+print("Printing count of each item  ", count_dict)
+
+# task 5
+first_list = [2, 3, 4, 5, 6, 7, 8]
+second_list = [4, 9, 16, 25, 36, 49, 64]
+# zip() використовується для поєднання двох і більше списків в один. Вона
+# повертає ітератор кортежів, де i-ий кортеж містить i-ий елемент з кожного з
+# переданих списків.
+result = zip(first_list, second_list)
+result_set = set(result)
+print(result_set)
+
+# task 6
+first_set = {23, 42, 65, 57, 78, 83, 29}
+second_set = {57, 83, 29, 67, 73, 43, 48}
+
+intersection = first_set.intersection(second_set)
+print("Intersection is ", intersection)
+for item in intersection:
+    first_set.remove(item)
+
+print("First Set after removing common element ", first_set)
+
+# task 7
+first_set = {57, 83, 29}
+second_set = {57, 83, 29, 67, 73, 43, 48}
+# set.issubset(other) дає змогу перевірити, чи перебуває кожен елемент множини
+# set у послідовності other.
+print("First set is subset of second set -", first_set.issubset(second_set))
+print("Second set is subset of first set - ", second_set.issubset(first_set))
+# set.issuperset(other) дає змогу перевірити, чи знаходиться кожен елемент
+# послідовності other у множині set. Метод повертає True, якщо множина set є
+# надмножиною ітерованого об'єкта other, якщо ні, то поверне False.
+print("First set is super set of second set - ",
+      first_set.issuperset(second_set))
+print("Second set is super set of first set - ",
+      second_set.issuperset(first_set))
+
+if first_set.issubset(second_set):
+    first_set.clear()
+
+if second_set.issubset(first_set):
+    second_set.clear()
+
+print("First Set ", first_set)
+print("Second Set ", second_set)
