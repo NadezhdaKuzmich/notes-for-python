@@ -113,3 +113,35 @@ if second_set.issubset(first_set):
 
 print("First Set ", first_set)
 print("Second Set ", second_set)
+
+# task 8
+roll_number = [47, 64, 69, 37, 76, 83, 95, 97]
+sample_dict = {'John': 47, 'Emma': 69, 'Kelly': 76, 'Jason': 97}
+roll_number[:] = [item for item in roll_number if item in sample_dict.values()]
+print("After removing unwanted elements from list:", roll_number)
+
+# task 9
+speed = {'jan': 47, 'feb': 52, 'march': 47, 'April': 44, 'May': 52, 'June': 53,
+         'july': 54, 'Aug': 44, 'Sept': 54}
+speed_list = list()
+
+# v1
+for val in speed.values():
+    if val not in speed_list:
+        speed_list.append(val)
+print("unique list", speed_list)
+
+# v2
+speed_list = list(set(speed.values()))
+print("unique list", speed_list)
+
+# task 10
+sample_list = [1, 2, 3, 4, 5, 2, 4, 6]
+sample_list = list(set(sample_list))
+print("unique list", sample_list)
+
+t = tuple(sample_list)
+print("tuple ", t)
+
+print("Minimum number is: ", min(t))
+print("Maximum number is: ", max(t))
