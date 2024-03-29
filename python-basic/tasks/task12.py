@@ -64,7 +64,6 @@ sample_dict = {
     "age": 25,
     "salary": 8000,
     "city": "New york"}
-
 keys = ["name", "salary"]
 
 # v1
@@ -74,7 +73,63 @@ print(new_dict)
 # v2
 res = dict()
 
-for k in keys:
-    res.update({k: sample_dict[k]})
-    
+for key in keys:
+    res.update({key: sample_dict[key]})
 print(res)
+
+# task 6
+sample_dict = {
+    "name": "Kelly",
+    "age": 25,
+    "salary": 8000,
+    "city": "New york"
+}
+keys = ["name", "salary"]
+
+# v1
+# dict.pop(key, default) - видаляє ключ і повертає значення. Якщо ключа немає,
+# повертає default (за замовчуванням кидає виняток).
+for key in keys:
+    sample_dict.pop(key)
+print(sample_dict)
+
+# v2
+sample_dict = {key: sample_dict[key] for key in sample_dict.keys() - keys}
+print(sample_dict)
+
+# task 7
+sample_dict = {'a': 100, 'b': 200, 'c': 300}
+if 200 in sample_dict.values():
+    print('200 present in a dict')
+
+# task 8
+sample_dict = {
+    "name": "Kelly",
+    "age": 25,
+    "salary": 8000,
+    "city": "New york"
+}
+
+sample_dict['location'] = sample_dict.pop('city')
+print(sample_dict)
+
+# task 9
+sample_dict = {
+    'Physics': 82,
+    'Math': 65,
+    'history': 75
+}
+# У функціях min() і max() можна вказати необов'язковий іменний параметр key.
+# Йому присвоюється одноаргументна функція, яка виконує якусь попередню дію над
+# елементами списку:
+print(min(sample_dict, key=sample_dict.get))
+
+# task 10
+sample_dict = {
+    'emp1': {'name': 'John', 'salary': 7500},
+    'emp2': {'name': 'Emma', 'salary': 8000},
+    'emp3': {'name': 'Brad', 'salary': 500}
+}
+
+sample_dict['emp3']['salary'] = 8500
+print(sample_dict)
