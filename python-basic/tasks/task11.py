@@ -86,3 +86,37 @@ print(list(range(4, 30, 2)))
 # task 9
 x = [4, 6, 8, 24, 12, 2]
 print(max(x))
+
+
+# task 10
+def greet(lang):
+    if lang == 'es':
+        return 'Hola'
+    elif lang == 'fr':
+        return 'Bonjour'
+    else:
+        return 'Hello'
+
+
+print(greet('en'), 'Glenn')
+print(greet('es'), 'Sally')
+print(greet('fr'), 'Michael')
+
+
+# task 11
+def compute_salary(hours, rate):
+    if hours > 40:
+        over_rate = rate * 1.5
+        over_hours = hours - 40
+        salary = 40 * rate + over_hours * over_rate
+    else:
+        salary = hours * rate
+
+    return salary
+
+
+h = float(input("Enter Hours: "))
+r = float(input("Enter Rate: "))
+p = compute_salary(h, r)
+
+print("Pay", p)
