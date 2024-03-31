@@ -6,6 +6,8 @@ class Some:
 
 # task 1
 class Vehicle:
+    color = "White"
+
     def __init__(self, name, max_speed, mileage):
         self.name = name
         self.max_speed = max_speed
@@ -17,7 +19,7 @@ class Vehicle:
 
 
 model = Vehicle("BMW", 240, 18)
-print(model.name, model.max_speed, model.mileage)
+print(model.name, model.max_speed, model.mileage, "\n")
 
 
 # task 2
@@ -28,8 +30,20 @@ class Bus(Vehicle):
 
 school_bus = Bus("School Volvo", 180, 12)
 print("Vehicle Name:", school_bus.name, "\nSpeed:", school_bus.max_speed,
-      "\nMileage:", school_bus.mileage)
+      "\nMileage:", school_bus.mileage, "\n")
 
 # task 3
-school_bus = Bus("School Volvo", 180, 12)
-print(school_bus.seating_capacity())
+print(school_bus.seating_capacity(), "\n")
+
+
+# task 4
+class Car(Vehicle):
+    pass
+
+
+print(school_bus.color, school_bus.name, "\nSpeed:",
+      school_bus.max_speed, "\nMileage:", school_bus.mileage, "\n")
+
+car = Car("Audi Q5", 240, 18)
+print(car.color, car.name, "\nSpeed:", car.max_speed, "\nMileage:",
+      car.mileage)
