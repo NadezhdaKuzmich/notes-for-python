@@ -67,3 +67,32 @@ some_tuple = (45, 45, 45, 45)
 some_tuple2 = (42, 44, 42, 42)
 print(check(some_tuple))
 print(check(some_tuple2))
+
+# task 11
+smallest = None
+largest = None
+
+while True:
+    num = input("Enter a number: ")
+
+    if num == "done":
+        break
+
+    try:
+        fnum = int(num)
+    except ValueError:
+        print('Invalid input')
+        continue
+
+    if smallest is None and largest is None:
+        smallest = fnum
+        largest = fnum
+
+    if fnum < smallest:
+        smallest = fnum
+
+    if fnum > largest:
+        largest = fnum
+
+print("Minimum is", smallest)
+print("Maximum is", largest)
