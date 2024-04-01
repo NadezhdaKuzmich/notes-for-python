@@ -47,3 +47,29 @@ print(school_bus.color, school_bus.name, "\nSpeed:",
 car = Car("Audi Q5", 240, 18)
 print(car.color, car.name, "\nSpeed:", car.max_speed, "\nMileage:",
       car.mileage)
+
+
+# task 5
+class Vehicle2:
+    def __init__(self, name, mileage, capacity):
+        self.name = name
+        self.mileage = mileage
+        self.capacity = capacity
+
+    def fare(self):
+        return self.capacity * 100
+
+
+class Bus2(Vehicle2):
+    def fare(self):
+        amount = super().fare()
+        amount += amount * 0.1
+        return amount
+
+
+school_bus2 = Bus2("School Volvo", 12, 50)
+print("\nTotal Bus fare is:", school_bus2.fare())
+
+# task 7
+print(type(school_bus))
+print(type(school_bus2))
