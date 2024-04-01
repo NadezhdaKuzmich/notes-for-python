@@ -73,3 +73,8 @@ print("\nTotal Bus fare is:", school_bus2.fare())
 # task 7
 print(type(school_bus))
 print(type(school_bus2))
+
+# task 8
+print(isinstance(school_bus, Vehicle))
+print(isinstance(school_bus2, Vehicle))
+print(isinstance(school_bus2, Vehicle2))
