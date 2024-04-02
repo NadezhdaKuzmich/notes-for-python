@@ -66,3 +66,45 @@ print(sampleArray)
 print("\nPrinting array of odd rows and even columns")
 newArray = sampleArray[::2, 1::2]
 print(newArray)
+
+# task 5
+arrayOne = numpy.array([[5, 6, 9], [21, 18, 27]])
+arrayTwo = numpy.array([[15, 33, 24], [4, 7, 1]])
+
+resultArray = arrayOne + arrayTwo
+print("\nAddition of two arrays is:")
+print(resultArray)
+
+# Об'єкт ітератора nditer забезпечує багато гнучких способів відвідати всі
+# елементи одного або декількох масивів систематичним способом.
+for num in numpy.nditer(resultArray, op_flags=['readwrite']):
+    num[...] = num * num
+print("\nResult array after calculating the square root of all elements")
+print(resultArray)
+
+# task 6
+print("\nCreating 8X3 array using numpy.arange")
+sampleArray = numpy.arange(10, 34, 1)
+sampleArray = sampleArray.reshape(8, 3)
+print(sampleArray)
+
+print("\nDividing 8X3 array into 4 sub array\n")
+subArrays = numpy.split(sampleArray, 4)
+print(subArrays)
+
+# task 7
+print("\nPrinting Original array")
+sampleArray = numpy.array([[34, 43, 73], [82, 22, 12], [53, 94, 66]])
+arr = numpy.array([[10, 10, 10]])
+print(sampleArray)
+
+print("\nArray after deleting column 2 on axis 1")
+# numpy.delete() повертає новий масив із підмасивами за видаленою віссю.
+sampleArray = numpy.delete(sampleArray, 1, axis=1)
+print(sampleArray)
+
+print("\nArray after inserting column 2 on axis 1")
+# numpy.insert(arr, obj, values, axis=None) вставляє значення або масив перед
+# індексом (obj) уздовж осі.
+sampleArray = numpy.insert(sampleArray, 1, arr, axis=1)
+print(sampleArray)
