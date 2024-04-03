@@ -42,8 +42,16 @@ color_list = ["Red", "Green", "White", "Black"]
 print("%s %s" % (color_list[0], color_list[-1]))
 
 # task 8
+# v1
 a = input("\nInput an integer: ")
 n1 = int("%s" % a)
 n2 = int("%s%s" % (a, a))
 n3 = int("%s%s%s" % (a, a, a))
+print(n1 + n2 + n3)
+
+# v2
+a = input("\nInput an integer: ")
+n1 = int(a)
+n2 = int(a * 2)
+n3 = int(a * 3)
 print(n1 + n2 + n3)
