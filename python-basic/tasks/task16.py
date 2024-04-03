@@ -25,8 +25,25 @@ area = pi * r ** 2
 print(f"The area of the circle with radius {r} is: {area}")
 
 # task 5
-values = input("Input some comma-separated numbers: ")
+values = input("\nInput some comma-separated numbers: ")
 some_list = values.split(",")
 some_tuple = tuple(some_list)
 print('List : ', some_list)
 print('Tuple : ', some_tuple)
+
+# task 6
+filename = input("\nInput the Filename: ")
+f_extns = filename.split(".")
+# repr() повертає формальне строкове представлення зазначеного об'єкта.
+print("The extension of the file is : " + repr(f_extns[-1]))
+
+# task 7
+color_list = ["Red", "Green", "White", "Black"]
+print("%s %s" % (color_list[0], color_list[-1]))
+
+# task 8
+a = input("\nInput an integer: ")
+n1 = int("%s" % a)
+n2 = int("%s%s" % (a, a))
+n3 = int("%s%s%s" % (a, a, a))
+print(n1 + n2 + n3)
