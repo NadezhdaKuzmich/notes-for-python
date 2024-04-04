@@ -75,3 +75,15 @@ l_date = date(2024, 4, 1)
 delta = l_date - f_date
 # days - повертає кількість днів
 print(delta.days)
+
+
+# task 12
+def new_string(text):
+    if len(text) >= 2 and text[:2] == "Is":
+        return text
+    else:
+        return "Is" + text
+
+
+print(new_string("Array"))
+print(new_string("IsEmpty"))
