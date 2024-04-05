@@ -81,3 +81,51 @@ def is_vowel(char):
 print(is_vowel('c'))
 print(is_vowel('e'))
 print(is_vowel('A'))
+
+
+# task 6
+# v1
+# def is_group_member(group_data, n):
+#     for value in group_data:
+#         if n == value:
+#             return True
+#     return False
+#
+#
+# print(is_group_member([1, 5, 8, 3], 3))
+# print(is_group_member([5, 8, 3], -1))
+
+
+# v2
+def is_group_member(group_data, n):
+    if n in group_data:
+        return True
+    return False
+
+
+print(is_group_member([1, 5, 8, 3], 0))
+print(is_group_member([5, 8, 3], 8))
+
+
+# task 7
+def histogram(items):
+    for n in items:
+        print('*' * n)
+
+
+histogram([0, 1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1, 0])
+
+# task 8
+numbers = [
+    386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615, 953,
+    345, 399, 162, 758, 219, 918, 237, 412, 566, 826, 248, 866, 950, 626, 949,
+    687, 217, 815, 67, 104, 58, 512, 24, 892, 894, 767, 553, 81, 379, 843, 831,
+    445, 742, 717, 958, 743, 527
+]
+
+for x in numbers:
+    if x == 237:
+        print(x)
+        break
+    elif x % 2 == 0:
+        print(x)
