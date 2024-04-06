@@ -1,3 +1,6 @@
+import os.path
+
+
 # task 1
 # v1
 def larger_string(text, n):
@@ -54,7 +57,7 @@ def list_count_4(nums):
 
 
 print(list_count_4([1, 4, 6, 7, 4]))
-print(list_count_4([1, 4, 6, 4, 7, 4]))
+print(list_count_4([1, 4, 6, 4, 7, 4]), '\n')
 
 
 # task 4
@@ -69,7 +72,7 @@ def substring_copy(text, n):
 
 
 print(substring_copy('abcdef', 2))
-print(substring_copy('p', 3))
+print(substring_copy('p', 3), '\n')
 
 
 # task 5
@@ -145,7 +148,7 @@ print(color_list_2.difference(color_list_1))
 print("\nDifference of color_list_1 and color_list_2:")
 print(color_list_1 - color_list_2)
 print("\nDifference of color_list_2 and color_list_1:")
-print(color_list_2 - color_list_1)
+print(color_list_2 - color_list_1, '\n')
 
 
 # task 10
@@ -159,3 +162,26 @@ print(add_numbers(10, 20))
 print(add_numbers(10, 20.23))
 print(add_numbers('5', 6))
 print(add_numbers('5', '6'))
+
+
+# task 11
+def personal_details(name, age, address):
+    print(f"\nName: {name}\nAge: {age}\nAddress: {address}\n")
+
+
+personal_details('Nadiia', 27, 'Poland, Krakow')
+
+# task 12
+# v1
+print(os.path.isfile('task17.txt'))
+print(os.path.isfile('task17.py'))
+# v2
+print(os.path.exists('task17.txt'))
+print(os.path.exists('task17.py'))
+# v3
+try:
+    my_file = open('task17.txt')
+    print("File found!")
+    my_file.close()
+except FileNotFoundError:
+    print("File not found!")
