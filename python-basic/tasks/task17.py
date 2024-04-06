@@ -28,8 +28,8 @@ print(larger_string('.py', 3))
 #     print("This is an even number.")
 
 # v2
-num = int(input("Enter a number: "))
-print("This is an odd number." if num % 2 > 0 else "This is an even number.")
+num = int(input("\nEnter a number: "))
+print("This is an odd number." if num % 2 > 0 else "This is an even number.\n")
 
 
 # task 3
@@ -129,3 +129,33 @@ for x in numbers:
         break
     elif x % 2 == 0:
         print(x)
+
+# task 9
+color_list_1 = set(["White", "Black", "Red"])
+color_list_2 = set(["Red", "Green"])
+print("\nOriginal set elements:")
+print(color_list_1)
+print(color_list_2)
+# v1
+print("\nDifference of color_list_1 and color_list_2:")
+print(color_list_1.difference(color_list_2))
+print("\nDifference of color_list_2 and color_list_1:")
+print(color_list_2.difference(color_list_1))
+# v2
+print("\nDifference of color_list_1 and color_list_2:")
+print(color_list_1 - color_list_2)
+print("\nDifference of color_list_2 and color_list_1:")
+print(color_list_2 - color_list_1)
+
+
+# task 10
+def add_numbers(a, b):
+    if not (isinstance(a, int) and isinstance(b, int)):
+        return "Inputs must be integers!"
+    return a + b
+
+
+print(add_numbers(10, 20))
+print(add_numbers(10, 20.23))
+print(add_numbers('5', 6))
+print(add_numbers('5', '6'))
