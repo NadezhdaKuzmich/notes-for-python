@@ -1,15 +1,15 @@
 import sys
 
 # task 1
-n = "246.2458"
+n = '246.2458'
 print(float(n))
 print(int(float(n)), '\n')
 
 # task 2
 for i in range(0, 10):
-    print('*', end="")
+    print('*', end='')
 
-print("\n")
+print('\n')
 
 
 # task 3
@@ -18,4 +18,4 @@ def eprint(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
 
 
-eprint("abc", "efg", "xyz", sep="--")
+eprint('abc', 'efg', 'xyz', sep='--')
