@@ -1,4 +1,6 @@
+from __future__ import print_function
 import sys
+import time
 
 # task 1
 n = '246.2458'
@@ -6,13 +8,32 @@ print(float(n))
 print(int(float(n)), '\n')
 
 # task 2
-for i in range(0, 10):
+for _ in range(0, 10):
     print('*', end='')
 
 print('\n')
 
 
 # task 3
+def sum_of_n_numbers(num):
+    start_time = time.time()
+    s = 0
+
+    for i in range(1, num + 1):
+        s = s + i
+
+    end_time = time.time()
+    return s, end_time - start_time
+
+
+print("Time to sum of 1 to 5 and required time to calculate is:",
+      sum_of_n_numbers(5))
+
+print("\nTime to sum of 1 to 10 and required time to calculate is:",
+      sum_of_n_numbers(10))
+
+
+# task 4
 def eprint(*args, **kwargs):
     # sys.stderr - повідомлення про помилки та власні запити перекладача.
     print(*args, file=sys.stderr, **kwargs)

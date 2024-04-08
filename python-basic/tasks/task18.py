@@ -7,6 +7,9 @@ import sys
 import sysconfig
 import site
 import multiprocessing
+import getpass
+import pwd
+import socket
 
 # task 1
 # v1
@@ -69,3 +72,33 @@ print('\n')
 # v3
 for item, value in os.environ.items():
     print(f"{item}: {value}")
+
+print('\n')
+
+# task 7
+# v1
+print(getpass.getuser())
+
+
+# v2
+def get_username():
+    return pwd.getpwuid(os.getuid())[0]
+
+
+print(get_username(), '\n')
+
+# task 8
+# Step 1: Get the local hostname.
+local_hostname = socket.gethostname()
+
+# Step 2: Get a list of IP addresses associated with the hostname.
+ip_addresses = socket.gethostbyname_ex(local_hostname)[2]
+
+# Step 3: Filter out loopback addresses (IPs starting with "127.").
+filtered_ips = [ip for ip in ip_addresses if not ip.startswith("127.")]
+
+# Step 4: Extract the first IP address (if available) from the filtered list.
+first_ip = filtered_ips[:1]
+
+# Step 5: Print the obtained IP address to the console.
+print(first_ip[0])
