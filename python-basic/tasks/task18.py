@@ -6,6 +6,7 @@ import os
 import sys
 import sysconfig
 import site
+import multiprocessing
 
 # task 1
 # v1
@@ -41,4 +42,9 @@ print(site.getsitepackages())
 
 # task 4
 # 'os.path.realpath(__file__)' gets the full path of the current Python script.
-print("\nCurrent File Name: ", os.path.realpath(__file__))
+print("\nCurrent File Name: ", os.path.realpath(__file__), '\n')
+
+# task 5
+# 'multiprocessing.cpu_count()' determines the number of available CPU cores.
+cpu_count = multiprocessing.cpu_count()
+print(cpu_count)
