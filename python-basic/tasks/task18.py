@@ -47,4 +47,20 @@ print("\nCurrent File Name: ", os.path.realpath(__file__), '\n')
 # task 5
 # 'multiprocessing.cpu_count()' determines the number of available CPU cores.
 cpu_count = multiprocessing.cpu_count()
-print(cpu_count)
+print(cpu_count, '\n')
+
+# task 6
+# The environ attribute of the os module is a dictionary-like object that
+# represents the environment variables in the current process.
+# The code that uses square brackets ([]) to access specific environment
+# variables by their names:
+# v1
+print(os.environ, '\n')
+print(os.environ['HOME'], '\n')
+print(os.environ['PATH'], '\n')
+# v2
+for data in os.environ:
+    print(data)
+    print('-' * 30)
+    print(os.environ[data])
+    print('=' * 30)
