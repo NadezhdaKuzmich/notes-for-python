@@ -1,15 +1,17 @@
-import struct
-# "struct" module provides pack and unpack functions for working with
-# variable-length binary data.
-import platform
+import getpass
+import multiprocessing
 import os
+import os.path
+import platform
+import pwd
+import site
+import socket
+import struct
 import sys
 import sysconfig
-import site
-import multiprocessing
-import getpass
-import pwd
-import socket
+import time
+from pathlib import Path
+import glob
 
 # task 1
 # v1
@@ -102,3 +104,19 @@ first_ip = filtered_ips[:1]
 
 # Step 5: Print the obtained IP address to the console.
 print(first_ip[0])
+
+# task 9
+# v1
+print("\nAbsolute file path: ", os.path.abspath(__file__), "\n")
+# v2
+p = Path(__file__).resolve()
+print(p)
+
+# task 10
+print("\nLast modified: %s" % time.ctime(os.path.getmtime(__file__)))
+print("Created: %s" % time.ctime(os.path.getctime(__file__)), "\n")
+
+# task 11
+files = glob.glob("*.py")
+files.sort(key=os.path.getmtime)
+print("\n".join(files))
