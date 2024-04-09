@@ -43,8 +43,35 @@ print("\nNumbers in sorted order:", a1, a2, a3)
 print("\nPython Copyright Information:")
 print(sys.copyright, "\n")
 
-
 # task 6
+if sys.byteorder == "little":
+    print("Little-endian platform.", "\n")
+else:
+    print("Big-endian platform.", "\n")
+
+# task 7
+# v1 (get)
+print(sys.getrecursionlimit())
+# v2 (set)
+sys.setrecursionlimit(1001)
+print(sys.getrecursionlimit())
+
+# task 8
+list_of_colors = ["Red", "White", "Black"]
+colors = "-".join(list_of_colors)
+print("\nAll Colors: " + colors)
+
+# task 9
+nums = [10, 20, 30]
+print(f"\nSum list: {sum(nums)}")
+nums = (7, 4, 9, 1, 3, 2)
+print(f"Sum tuple: {sum(nums)}")
+nums = {7, 4, 9, 1, 3, 2}
+print(f"Sum set: {sum(nums)}")
+nums = {'a': 100, 'b': 200, 'c': 300, 'd': 120}
+print(f"Sum dict: {sum(nums.values())}")
+
+# task 9
 def eprint(*args, **kwargs):
     # sys.stderr - повідомлення про помилки та власні запити перекладача.
     print(*args, file=sys.stderr, **kwargs)
