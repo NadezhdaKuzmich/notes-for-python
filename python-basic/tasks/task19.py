@@ -71,7 +71,7 @@ print(f"Sum set: {sum(nums)}")
 nums = {'a': 100, 'b': 200, 'c': 300, 'd': 120}
 print(f"Sum dict: {sum(nums.values())}")
 
-# task 9
+# task 10
 def eprint(*args, **kwargs):
     # sys.stderr - повідомлення про помилки та власні запити перекладача.
     print(*args, file=sys.stderr, **kwargs)
