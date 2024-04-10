@@ -72,6 +72,17 @@ nums = {'a': 100, 'b': 200, 'c': 300, 'd': 120}
 print(f"Sum dict: {sum(nums.values())}")
 
 # task 10
+s = "The quick brown fox jumps over the lazy dog."
+print("\nNumber of occurrences of 'o' in the said string:")
+print(s.count("o"), "\n")
+
+# task 11
+num = [2, 3, 4, 5]
+print(all(x > 1 for x in num))
+print(all(x > 4 for x in num), "\n")
+
+
+# task 12
 def eprint(*args, **kwargs):
     # sys.stderr - повідомлення про помилки та власні запити перекладача.
     print(*args, file=sys.stderr, **kwargs)

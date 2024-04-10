@@ -120,3 +120,12 @@ print("Created: %s" % time.ctime(os.path.getctime(__file__)), "\n")
 files = glob.glob("*.py")
 files.sort(key=os.path.getmtime)
 print("\n".join(files))
+
+# task 12
+path = "task18.py"
+if os.path.isdir(path):
+    print("\nIt is a directory")
+elif os.path.isfile(path):
+    print("\nIt is a normal file")
+else:
+    print("It is a special file (socket, FIFO, device file)")
