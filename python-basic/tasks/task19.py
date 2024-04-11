@@ -1,4 +1,3 @@
-from __future__ import print_function
 import sys
 import time
 
@@ -28,7 +27,6 @@ def sum_of_n_numbers(num):
 
 print("Time to sum of 1 to 5 and required time to calculate is:",
       sum_of_n_numbers(5))
-
 print("\nTime to sum of 1 to 10 and required time to calculate is:",
       sum_of_n_numbers(10))
 
