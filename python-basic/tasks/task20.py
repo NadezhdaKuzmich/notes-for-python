@@ -82,3 +82,20 @@ print('The total order amount comes to %.2f' % pi)
 # v2
 print("The total order amount comes to {:0.6f}".format(pi))
 print("The total order amount comes to {:0.2f}".format(pi))
+
+# task 11
+str_num = "1234567890"
+print("\nOriginal string:", str_num)
+print('%.6s' % str_num)
+print('%.9s' % str_num)
+print('%.10s' % str_num)
+
+
+# task 12
+def empty_var(lst):
+    return [type(item)() for item in lst]
+
+
+sample_lst = ["python", {"x": 12}, [10, 12, "sfsd"], (4, 5), 200]
+print("\nEmpty the said variables without destroying them:")
+print(empty_var(sample_lst))
