@@ -58,3 +58,27 @@ nums = [10, 20, 30]
 nums_product = reduce((lambda a, b: a * b), nums)
 print("\nProduct of the said numbers (without using a for loop):",
       nums_product)
+
+# task 7
+num_list = [45, 55, 60, 37, 100, 105, 220]
+result = list(filter(lambda n: (n % 15 == 0), num_list))
+print("\nNumbers divisible by 15 are", result)
+
+# task 8
+nums = [34, 1, 0, -23, 12, -88]
+print("\nOriginal numbers in the list: ", nums)
+new_nums = list(filter(lambda n: n > 0, nums))
+print("Positive numbers in the said list: ", new_nums)
+
+# task 9
+str1 = "Python"
+print("\nMemory location of str1 =", hex(id(str1)))
+
+# task 10
+pi = 3.141592654
+# v1
+print('\nThe total order amount comes to %f' % pi)
+print('The total order amount comes to %.2f' % pi)
+# v2
+print("The total order amount comes to {:0.6f}".format(pi))
+print("The total order amount comes to {:0.2f}".format(pi))
