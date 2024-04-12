@@ -51,7 +51,7 @@ host_name = platform.uname()[1]
 print("Host name:", host_name)
 # v3
 host_name = os.uname().nodename
-print("Host name:", host_name, "\n")
+print("Host name:", host_name)
 
 # task 6
 nums = [10, 20, 30]
