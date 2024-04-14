@@ -115,3 +115,14 @@ elif type(x) is tuple:
     print('x is a tuple')
 else:
     print('Neither a list nor a set nor a tuple.')
+
+print()
+
+
+# task 12
+def multiple(m, n):
+    return m % n == 0
+
+
+print(multiple(20, 5))
+print(multiple(7, 2))
