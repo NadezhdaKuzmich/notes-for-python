@@ -72,4 +72,46 @@ print(c1)
 print(c2, "\n")
 
 # task 10
-print(struct.calcsize("P") * 8)
+print(struct.calcsize("P") * 8, "\n")
+
+# task 11
+# v1
+print(isinstance(25, int))
+print(isinstance("25", str), "\n")
+
+
+# v2
+def check_type(nums):
+    if isinstance(x, tuple):
+        return 'The variable x is a tuple'
+    elif isinstance(x, list):
+        return 'The variable x is a list'
+    elif isinstance(x, set):
+        return 'The variable x is a set'
+    else:
+        return 'Neither a list or a set or a tuple.'
+
+
+x = ['a', 'b', 'c', 'd']
+print(check_type(x))
+
+x = {'a', 'b', 'c', 'd'}
+print(check_type(x))
+
+x = ('tuple', False, 3.2, 1)
+print(check_type(x))
+
+x = 100
+print(check_type(x))
+
+# v3
+x = ('tuple', False, 3.2, 1)
+
+if type(x) is list:
+    print('x is a list')
+elif type(x) is set:
+    print('x is a set')
+elif type(x) is tuple:
+    print('x is a tuple')
+else:
+    print('Neither a list nor a set nor a tuple.')
