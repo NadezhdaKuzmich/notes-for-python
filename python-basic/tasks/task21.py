@@ -2,6 +2,7 @@ import sys
 import json
 import os.path
 from timeit import default_timer
+import struct
 
 # task 1
 print("Float value information: ", sys.float_info)
@@ -59,7 +60,16 @@ timer(15)
 # task 8
 # v1
 a, b = [int(a) for a in input("\nInput the value of a & b: ").split(", ")]
-print(f"The value of a & b are: {a=}, {b=}")
+print(f"The value of a & b are: {a=}, {b=}", "\n")
 # v2
-x, y = map(int, input("\nInput the value of x & y: ").split(", "))
-print(f"The value of x & y are: {x=}, {y=}")
+# x, y = map(int, input("\nInput the value of x & y: ").split(", "))
+# print(f"The value of x & y are: {x=}, {y=}", "\n")
+
+# task 9
+d = {'Red': 'Green'}
+(c1, c2), = d.items()
+print(c1)
+print(c2, "\n")
+
+# task 10
+print(struct.calcsize("P") * 8)
